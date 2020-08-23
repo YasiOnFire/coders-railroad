@@ -1,29 +1,5 @@
-# coders-railroad
+[WIP]
+# CodersRailroad
 
-## Project setup
-```
-yarn install
-```
+This is a simple project made for Hactoberfest 2020. An easy entry to Pull Requests. Inspired by Twolio Open Pixel Art.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

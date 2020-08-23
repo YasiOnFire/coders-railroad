@@ -6121,6 +6121,15 @@ jest-jasmine2@^24.9.0:
     pretty-format "^24.9.0"
     throat "^4.0.0"
 
+jest-json-schema@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/jest-json-schema/-/jest-json-schema-2.1.0.tgz#e63fa6819620cee1985c36379acca09891511307"
+  integrity sha512-FaXuFj6Rak1OnV+cfQsD8YnfyfEJ/DeGbomRnmNRO0HeyCpqLsDkC0Lr6z0hXK4/d7Ekz1mqBewVJpcYQ6H89w==
+  dependencies:
+    ajv "^6.10.2"
+    chalk "^2.4.1"
+    jest-matcher-utils "^24.0.0"
+
 jest-leak-detector@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-leak-detector/-/jest-leak-detector-24.9.0.tgz#b665dea7c77100c5c4f7dfcb153b65cf07dcf96a"
@@ -6129,7 +6138,7 @@ jest-leak-detector@^24.9.0:
     jest-get-type "^24.9.0"
     pretty-format "^24.9.0"
 
-jest-matcher-utils@^24.9.0:
+jest-matcher-utils@^24.0.0, jest-matcher-utils@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-24.9.0.tgz#f5b3661d5e628dffe6dd65251dfdae0e87c3a073"
   integrity sha512-OZz2IXsu6eaiMAwe67c1T+5tUAtQyQx27/EMEkbFAGiw52tB9em+uGbzpcgYVpA8wl0hlxKPZxrly4CXU/GjHA==

@@ -1,0 +1,60 @@
+$vp-small: 560px;
+$vp-large: 1920px;
+
+@mixin fluid-font-size(
+  $minFontSize: 16px,
+  $maxFontSize: 20px,
+  $minViewport: 600px,
+  $maxViewport: 1200px
+) {
+  $slope: ($minFontSize - $maxFontSize) / ($minViewport - $maxViewport);
+  $base: $maxFontSize - $slope * $maxViewport;
+
+  font-size: $minFontSize;
+
+  @media (min-width: $minViewport) {
+    font-size: calc(#{$base} + 100vw * #{$slope});
+  }
+
+  @media (min-width: $maxViewport) {
+    font-size: $maxFontSize;
+  }
+}
+@mixin fluid-bottom(
+  $minBottom: 16px,
+  $maxBottom: 20px,
+  $minViewport: 600px,
+  $maxViewport: 1200px
+) {
+  $slope: ($minBottom - $maxBottom) / ($minViewport - $maxViewport);
+  $base: $maxBottom - $slope * $maxViewport;
+
+  bottom: $minBottom;
+
+  @media (min-width: $minViewport) {
+    bottom: calc(#{$base} + 100vw * #{$slope});
+  }
+
+  @media (min-width: $maxViewport) {
+    bottom: $maxBottom;
+  }
+}
+@mixin fluid-line-height(
+  $minLineHeight: 16px,
+  $maxLineHeight: 20px,
+  $minViewport: 600px,
+  $maxViewport: 1200px
+) {
+  $slope: ($minLineHeight - $maxLineHeight) / ($minViewport - $maxViewport);
+  $base: $maxLineHeight - $slope * $maxViewport;
+
+  line-height: $minLineHeight;
+
+  @media (min-width: $minViewport) {
+    line-height: calc(#{$base} + 100vw * #{$slope});
+  }
+
+  @media (min-width: $maxViewport) {
+    line-height: $maxLineHeight;
+  }
+}
