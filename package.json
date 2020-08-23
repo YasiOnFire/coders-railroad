@@ -37,7 +37,7 @@
     "vue-jest": "^5.0.0-0"
   },
   "gitHooks": {
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged && yarn run test:unit"
   },
   "lint-staged": {
     "*.{js,jsx,vue}": [
