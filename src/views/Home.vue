@@ -12,7 +12,7 @@
         v-model="search"
         type="search"
         class="search"
-        placeholder="Search cart by name"
+        placeholder="Search by name or text"
       />
       | # of carts: {{ formatCount(userCarts.length) }} |
       <br />
@@ -55,7 +55,9 @@ export default {
     const filteredData = computed(() => {
       return search.value?.trim() !== ""
         ? userCarts.value.filter(
-            el => el.text.toLowerCase().indexOf(search.value.toLowerCase()) > -1
+            el =>
+              el.text.toLowerCase().indexOf(search.value.toLowerCase()) > -1 ||
+              el.name.toLowerCase().indexOf(search.value.toLowerCase()) > -1
           )
         : userCarts.value;
     });
