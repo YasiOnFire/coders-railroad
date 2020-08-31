@@ -21,7 +21,7 @@ describe("Data", () => {
           text: {
             type: "string",
             minLength: 1,
-            maxLength: 10,
+            maxLength: 18,
             pattern: "^[a-zA-Z0-9 @#!.?]*$"
           },
           cart: {

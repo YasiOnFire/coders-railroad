@@ -6,12 +6,12 @@ export const data = [
   },
   {
     name: "YasiOnFire2",
-    text: "Yasio",
+    text: "Zuza",
     cart: 3
   },
   {
     name: "YasiOnFire3",
-    text: "Yasio sdf",
+    text: "123456789012345678",
     cart: 0
   },
   {

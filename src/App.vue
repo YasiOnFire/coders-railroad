@@ -106,7 +106,7 @@ body {
   font-family: "Fira Code", monospace;
   // overflow-x: auto;
   overflow-x: hidden;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   width: 100vw;
   // padding-top: 9vw;
   padding-bottom: 100px;
