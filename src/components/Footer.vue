@@ -1,8 +1,12 @@
 <template>
   <footer>
-    Created by: <a href="https://yasio.pl">yasio.pl</a> as a part of
-    <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest</a> by
-    <a href="https://www.digitalocean.com/">DigitalOcean</a>
+    Created by: <a href="https://yasio.pl" target="_blank">yasio.pl</a> as a
+    part of
+    <a href="https://hacktoberfest.digitalocean.com/" target="_blank"
+      >Hacktoberfest</a
+    >
+    by
+    <a href="https://www.digitalocean.com/" target="_blank">DigitalOcean</a>
   </footer>
 </template>
 

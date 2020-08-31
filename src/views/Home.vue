@@ -3,23 +3,25 @@
     <p>
       ------------------------------------------------------------<br />
       | Attach your cart by submitting a pull request on
-      <a href="#">GitHub</a>. |<br />
+      <a href="https://github.com/YasiOnFire/coders-railroad" target="_blank"
+        >GitHub</a
+      >. |<br />
       ------------------------------------------------------------<br />
       | <router-link to="/about" class="brn">Learn More</router-link> |
       <input
+        v-model="search"
         type="search"
         class="search"
         placeholder="Search cart by name"
-        @input="search"
       />
-      | # of carts: {{ data.length }} |
+      | # of carts: {{ formatCount(userCarts.length) }} |
       <br />
       ------------------------------------------------------------<br />
     </p>
     <p id="train" class="train-wrp">
       <span v-html="formatFixer(locomotive)"></span>
       <span
-        v-for="(el, idx) in data"
+        v-for="(el, idx) in filteredData"
         :key="idx"
         class="cart"
         v-html="messageInject(formatFixer(carts[el.cart]), el)"
@@ -33,6 +35,7 @@
 import { data } from "@/assets/data.js";
 import { formatFixer } from "@/assets/utils.js";
 import { locomotive, end, carts } from "@/assets/constants.js";
+import { ref, computed } from "vue";
 
 export default {
   name: "Home",
@@ -40,13 +43,29 @@ export default {
     const messageInject = (val, data) => {
       return (val += `<span><a href="https://github.com/${data.name}" target="_blank">${data.text}</a></span>`);
     };
-    const search = event => {
-      console.log(event);
+
+    const formatCount = val => {
+      return val.toString().padStart(6, "0");
     };
+
+    const search = ref("");
+    const userCarts = ref([]);
+    userCarts.value = data;
+
+    const filteredData = computed(() => {
+      return search.value?.trim() !== ""
+        ? userCarts.value.filter(
+            el => el.text.toLowerCase().indexOf(search.value.toLowerCase()) > -1
+          )
+        : userCarts.value;
+    });
+
     return {
+      filteredData,
+      formatCount,
       search,
       messageInject,
-      data,
+      userCarts,
       carts,
       end,
       formatFixer,
@@ -75,6 +94,9 @@ export default {
   color: rgb(218, 233, 226);
   @include fluid-font-size(20px, 28px, $vp-small, $vp-large);
   @include fluid-line-height(24px, 32px, $vp-small, $vp-large);
+}
+pre {
+  font-family: "Fira Code", monospace;
 }
 .cart {
   position: relative;
