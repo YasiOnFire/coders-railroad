@@ -11,8 +11,8 @@
       1. Fork repo<br />
       2. Clone your fork<br />
       3. Run `yarn`<br />
-      4. Add your cart to `src/assets/data.js` and run `yarn serve` to see your
-      cart<br />
+      4. Add your cart to `src/assets/data.json` and run `yarn serve` to see
+      your cart<br />
       5. Run `yarn test:unit`<br />
       6. Commit, push, create pull request
     </p>
@@ -51,7 +51,7 @@ _|       #2       |_
 
 ### Rules
 
-* only data.js may be edited
+* only data.json may be edited
 * must pass tests
 * only one cart per github user 
 * text may contain only letters and digits soult be maximum of 18 chars

@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import { data } from "@/assets/data.js";
-import { formatFixer } from "@/assets/utils.js";
+import data from "@/assets/data.json";
+import { formatFixer, encodeHTML } from "@/assets/utils.js";
 import { locomotive, end, carts } from "@/assets/constants.js";
 import { ref, computed } from "vue";
 
@@ -41,7 +41,9 @@ export default {
   name: "Home",
   setup() {
     const messageInject = (val, data) => {
-      return (val += `<span><a href="https://github.com/${data.name}" target="_blank">${data.text}</a></span>`);
+      return (val += `<span><a href="https://github.com/${
+        data.name
+      }" target="_blank">${encodeHTML(data.text)}</a></span>`);
     };
 
     const formatCount = val => {

@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import { data } from "@/assets/data.js";
+import data from "@/assets/data.json";
 import { matchers } from "jest-json-schema";
 
 expect.extend(matchers);
@@ -41,5 +41,10 @@ describe("Data", () => {
       return seen.size === seen.add(el.name).size;
     });
     expect(hasDuplicates).toBeFalsy();
+  });
+
+  it("should not contain HTML", async () => {
+    const hasHTML = data.some(el => /<\/?[a-z][\s\S]*>/i.test(el.text));
+    expect(hasHTML).toBeFalsy();
   });
 });

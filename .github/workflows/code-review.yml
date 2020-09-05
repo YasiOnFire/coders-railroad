@@ -19,3 +19,7 @@ jobs:
           yarn run test:unit
         env:
           CI: true
+      - name: Danger
+        run: npx danger ci --text-only -f
+        env:
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}

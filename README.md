@@ -11,7 +11,7 @@ See the train in action: [https://coders-railroad.netlify.app/](https://coders-r
 1. Fork repo
 2. Clone your fork
 3. Run `yarn`
-4. Add your cart to `src/assets/data.js` and run `yarn serve` to see your cart
+4. Add your cart to `src/assets/data.json` and run `yarn serve` to see your cart
 5. Run `yarn test:unit`
 6. Commit, push, create pull request
 
@@ -50,7 +50,7 @@ _|       #2       |_
 
 ### Rules
 
-* only `data.js` may be edited
+* only `data.json` may be edited
 * must pass tests
 * only one cart per github user 
 * text may contain only letters, digits and should be maximum of 18 chars
