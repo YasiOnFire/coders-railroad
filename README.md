@@ -19,11 +19,17 @@ See the train in action: [https://coders-railroad.netlify.app/](https://coders-r
 
 ```json
 {
-  "name": "YasiOnFire", // your Github name
-  "text": "Yasio", // your message (max 18 chars)
-  "cart": 1 // one of four avaiable carts, see below
+  "name": "YasiOnFire",
+  "text": "Yasio",
+  "cart": 1
 }
 ```
+
+| property | description                            |
+|------|---------------------------------------------|
+| `name` | your Github name                            |
+| `text` | your message to show on cart (max 18 chars) |
+| `cart` | # of cart to use (see below)                |
 
 ### Avaiable carts:
 ```
