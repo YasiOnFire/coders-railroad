@@ -1,5 +1,5 @@
-const { message, fail, markdown, danger } = require("danger");
-const { stripIndent } = require("common-tags");
+import { message, fail, markdown, danger } from "danger";
+import { stripIndent } from "common-tags";
 
 function handleMultipleFileChanges(gitChanges) {
   fail(
@@ -27,7 +27,7 @@ function evaluateChanges(changes) {
 }
 
 async function run() {
-  if (danger.github.thisPR) {
+  // if (danger.github.thisPR) {
     if ((await danger.git.linesOfCode()) === 0) {
       fail("This PR is empty. Read README.md.");
     } else if (!hasOnlyCartChange(danger.git)) {
@@ -43,9 +43,9 @@ async function run() {
         );
       }
     }
-  }
+  // }
 }
 
 run().catch(console.error);
 
-module.exports = { handleMultipleFileChanges, hasOnlyCartChange };
+export { handleMultipleFileChanges, hasOnlyCartChange };
