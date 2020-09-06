@@ -6,7 +6,6 @@ This is a simple project made for [Hactoberfest 2020](https://hacktoberfest.digi
 
 ## See the train in action: >>> [https://coders-railroad.netlify.app/](https://coders-railroad.netlify.app/) <<<
 
----
 ## How to contribute?
 
 1. Fork repo
