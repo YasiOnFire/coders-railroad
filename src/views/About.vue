@@ -18,11 +18,11 @@
     </p>
     <pre>
 
-```javascript
+```json
 {
-  name: "YasiOnFire", // your Github name
-  text: "Yasio", // your message (max 18 chars)
-  cart: 1 // one of four avaiable carts, see below
+  "name": "YasiOnFire", // your Github name
+  "text": "Yasio", // your message (max 18 chars)
+  "cart": 1 // one of four avaiable carts, see below
 }
 ```
 
