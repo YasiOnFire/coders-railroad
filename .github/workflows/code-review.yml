@@ -23,3 +23,12 @@ jobs:
         run: npx danger ci --text-only -f
         env:
           GITHUB_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
+  mergepal-merge:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - uses: actions/checkout@v1
+      - uses: maxkomarychev/merge-pal-action@vX.Y.Z
+        with:
+          token: ${{ secrets.WF_GITHUB_TOKEN }}

@@ -14,7 +14,7 @@
       4. Add your cart to `src/assets/data.json` and run `yarn serve` to see
       your cart<br />
       5. Run `yarn test:unit`<br />
-      6. Commit, push, create pull request
+      6. Create your branch, commit, push, create pull request
     </p>
     <pre>
 
