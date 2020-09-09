@@ -1,7 +1,3 @@
----
-title: "[ADD CART]"
-label: wip
----
 ## Checklist
 
 <!-- Before submitting your pull request please make sure you checked the following tasks: -->
@@ -11,6 +7,6 @@ label: wip
 
 <!-- To check a task, put a "x" between the brackets, similar to [x] -->
 
-<!-- If you are ready to merge remove wip label -->
+<!-- If you are ready to merge add ready-to-merge label -->
 
 /cc @YasiOnFire

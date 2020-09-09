@@ -1,3 +1,5 @@
 blacklist:
   - wip
+whitelist:
+  - ready-to-merge
 method: squash
