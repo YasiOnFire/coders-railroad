@@ -5,8 +5,8 @@
       This is a simple project made for
       <a href="https://hacktoberfest.digitalocean.com/" target="_blank"
         >Hactoberfest 2020</a
-      >. An easy entry to Pull Requests. You can add your cart to the HF2020
-      train by submitting a PR.<br /><br />
+      >. An easy entry to Pull Requests.<br />You can add your cart to the
+      HF2020 train by submitting a PR.<br /><br />
       ## How to contribute?<br />
       1. Fork repo<br />
       2. Clone your fork<br />
