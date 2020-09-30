@@ -1,4 +1,3 @@
-[WIP]
 # CodersRailroad 🚂 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ce52d7e4-bfb2-497c-a46c-096a68712f34/deploy-status)](https://app.netlify.com/sites/coders-railroad/deploys) [![GitHub contributors](https://img.shields.io/github/contributors/YasiOnFire/coders-railroad.svg)](https://GitHub.com/YasiOnFire/coders-railroad/graphs/contributors/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fcoders-railroad.netlify.app%2F&via=YasiOnFire&text=Add%20your%20cart%20to%20the%20Hacktoberfest%20Train%21&hashtags=hacktoberfest)
 
