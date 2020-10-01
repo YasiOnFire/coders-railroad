@@ -17,4 +17,4 @@ jobs:
       - name: Profanity filter
         uses: radiantly/profanity-filter-action@v1.1
         with:
-          repo-token: ${{ secrets.WF_GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
