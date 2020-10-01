@@ -31,6 +31,6 @@ jobs:
       - build
     steps:
       - uses: actions/checkout@v1
-      - uses: maxkomarychev/merge-pal-action@v0.5.1
+      - uses:  YasiOnFire/merge-pal-action@v0.5.1
         with:
           token: ${{ secrets.WF_GITHUB_TOKEN }}
