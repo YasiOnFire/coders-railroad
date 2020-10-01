@@ -24,6 +24,8 @@
         v-for="(el, idx) in filteredData"
         :key="idx"
         class="cart"
+        :title="el.name"
+        :data-name="`Cart by: ${el.name}`"
         v-html="messageInject(formatFixer(carts[el.cart]), el)"
       ></span>
       <span v-html="formatFixer(end)"></span>
@@ -110,6 +112,20 @@ pre {
     left: calc(50% - 7px);
     transform: translateX(-50%);
     white-space: nowrap;
+  }
+  &:after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    color: #fff;
+    font-size: 10px;
+    display: flex;
+    z-index: 9;
+    justify-content: center;
+    opacity: 0.6;
   }
 }
 </style>
