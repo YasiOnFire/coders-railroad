@@ -98,6 +98,11 @@ function evaluateChanges(changes: JSONPatch) {
     (cart: Cart) => !beforeCarts.has(JSON.stringify(cart))
   );
 
+  if (newCart.text.length > 18) {
+    fail(stripIndents`Your message is too long`);
+    return false;
+  }
+
   if (danger.github && newCart.name.toLowerCase() !== gitHubUsername?.toLowerCase()) {
     fail(stripIndents`You cannot create cart for other GitHub users.`);
     return false;
