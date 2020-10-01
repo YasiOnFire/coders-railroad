@@ -13,5 +13,10 @@
     "name": "kryzysiek",
     "text": "Siema 2!",
     "cart": 2
-  }
+  }, 
+  {
+    "name": "simonsolberg",
+    "text": "Whats up Hacktoberfest",
+    "cart": 3
+  }    
 ]
