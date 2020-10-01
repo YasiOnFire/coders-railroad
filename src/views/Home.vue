@@ -116,7 +116,7 @@ pre {
   &:after {
     content: attr(data-name);
     position: absolute;
-    bottom: 60px;
+    @include fluid-bottom(60px, 68px, $vp-small, $vp-large);
     width: 100%;
     height: 10px;
     left: 0;
