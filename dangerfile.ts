@@ -7,6 +7,7 @@ interface Cart {
   cart: number
 }
 
+//To jest probny test PR
 function handleMultipleFileChanges(gitChanges: GitDSL) {
   fail(
     "This PR requires a manual review because you are changing more files than just `src/assets/data.json`."
