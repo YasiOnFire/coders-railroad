@@ -123,6 +123,7 @@ function evaluateChanges(changes: JSONPatch) {
 
 async function run() {
   // if (danger.github.thisPR) {
+  try {
     if ((await danger.git.linesOfCode()) === 0) {
       fail("This PR is empty. Read README.md.");
     } else if (!hasOnlyCartChange(danger.git)) {
@@ -138,6 +139,9 @@ async function run() {
         );
       }
     }
+  } catch (error) {
+    fail(JSON.stringify(error))
+  }
   // }
 }
 
