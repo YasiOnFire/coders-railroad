@@ -18,5 +18,10 @@
     "name": "simonsolberg",
     "text": "Hi Hacktoberfest",
     "cart": 3
-  }  
+  },
+  {
+    "name": "DavidGolodetsky",
+    "text": "Peace V",
+    "cart": 0
+  }
 ]
