@@ -28,5 +28,20 @@
     "name": "NikiforovAll",
     "text": "Choo-choo",
     "cart": 0
+  },
+  {
+    "name": "evilfactory",
+    "text": "godam hotdog.jpg",
+    "cart": 3
+  },
+  {
+    "name": "jmakhack",
+    "text": "wauweeeeeeeee",
+    "cart": 0
+  },
+  {
+    "name": "MauricioLudwig",
+    "text": "Stay safe!",
+    "cart": 0
   }
 ]

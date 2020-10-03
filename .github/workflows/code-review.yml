@@ -2,7 +2,7 @@ name: Code Review
 
 on: 
   pull_request_target:
-    types: [labeled, opened, edited, reopened, synchronize, ready_for_review, unlocked, review_requested]
+    types: [opened, edited, reopened, synchronize, ready_for_review, unlocked, review_requested]
 
 jobs:
   build:
