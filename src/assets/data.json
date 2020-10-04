@@ -58,5 +58,10 @@
     "name": "eltociear",
     "text": "Konnichiwa Sekai!",
     "cart": 1
+  },
+  {
+    "name": "leoMartinDev",
+    "text": "Bonjour !",
+    "cart": 2
   }
 ]
