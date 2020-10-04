@@ -58,5 +58,10 @@
     "name": "eltociear",
     "text": "Konnichiwa Sekai!",
     "cart": 1
+  },
+  {
+    "name": "Antoine",
+    "text": "wanted a smiley",
+    "cart": 0
   }
 ]
