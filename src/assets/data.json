@@ -78,5 +78,10 @@
     "name": "ansidev",
     "text": "Le Minh Tri",
     "cart": 3
+  },
+  {
+    "name":"devanshmehra",
+    "text": "namaste",
+    "cart": 0
   }
 ]
