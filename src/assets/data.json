@@ -108,5 +108,10 @@
     "name": "wolfedme",
     "text": "Hacktober Hype!",
     "cart": 0
+  },
+  {
+    "name": "ewatch",
+    "text": "Hacky Travel 2020",
+    "cart": 3
   }
 ]
