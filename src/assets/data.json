@@ -80,18 +80,23 @@
     "cart": 3
   },
   {
-    "name":"devanshmehra",
+    "name": "devanshmehra",
     "text": "namaste",
     "cart": 0
   },
   {
-    "name":"thilinatnt",
+    "name": "thilinatnt",
     "text": "Ayubowan!",
     "cart": 3
   },
   {
-    "name":"PPInfy",
+    "name": "PPInfy",
     "text": "Namaskaram",
     "cart": 2
+  },
+  {
+    "name": "Mrrwmix",
+    "text": "Ahoy there!",
+    "cart": 1
   }
 ]
