@@ -103,5 +103,10 @@
     "name": "inuad",
     "text": "Sawatdee",
     "cart": 3
+  },
+  {
+    "name": "wolfedme",
+    "text": "Hacktober Hype!",
+    "cart": 0
   }
 ]
