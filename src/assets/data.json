@@ -123,5 +123,10 @@
     "name": "opensourceally",
     "text": "Hack is back",
     "cart": 1
+  },
+  {
+    "name": "lhjd",
+    "text": "My First PR!",
+    "cart": 1
   }  
 ]
