@@ -133,5 +133,10 @@
     "name": "dhutchings3",
     "text": "Happy Hacktober!",
     "cart": 3
-  }    
+  },
+  {
+    "name": "gerwinjonathan",
+    "text": "First PR Hacktober!!!",
+    "cart": 2
+  }
 ]
