@@ -128,5 +128,10 @@
     "name": "lhjd",
     "text": "My First PR!",
     "cart": 1
-  }  
+  },
+  {
+    "name": "dhutchings3",
+    "text": "Happy Hacktober!",
+    "cart": 3
+  }    
 ]
