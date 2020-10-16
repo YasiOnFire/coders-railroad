@@ -16,7 +16,7 @@ describe("Data", () => {
             type: "string",
             minLength: 1,
             maxLength: 30,
-            pattern: "^[a-zA-Z0-9]*$"
+            pattern: "^[a-zA-Z0-9-]*$"
           },
           text: {
             type: "string",
