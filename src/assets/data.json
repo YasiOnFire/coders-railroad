@@ -201,7 +201,12 @@
   },
   {
     "name": "gsiradze",
-    "text": "გამარჯობა",
+    "text": "hello",
     "cart": 2
+  },
+  {
+    "name": "mViolet",
+    "text": "KNITTING SUPPLIES",
+    "cart": 3
   }
 ]
