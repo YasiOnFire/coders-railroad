@@ -198,5 +198,10 @@
     "name": "pierresaid",
     "text": "Bonjour",
     "cart": 1
+  },
+  {
+    "name": "gsiradze",
+    "text": "გამარჯობა",
+    "cart": 2
   }
 ]
