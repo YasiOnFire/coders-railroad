@@ -22,7 +22,7 @@ describe("Data", () => {
             type: "string",
             minLength: 1,
             maxLength: 18,
-            pattern: "^[a-zA-Z0-9 @#!.?-]*$"
+            pattern: "^[a-zA-Z0-9\u10A0-\u10FF @#!.?-]*$"
           },
           cart: {
             type: "integer",
