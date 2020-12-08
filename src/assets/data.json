@@ -139,7 +139,7 @@
     "text": "Hacktober!",
     "cart": 2
   },
-    {
+  {
     "name": "astnrgn",
     "text": "ALL ABOARD!",
     "cart": 0
@@ -218,5 +218,10 @@
     "name": "mViolet",
     "text": "KNITTING SUPPLIES",
     "cart": 0
+  },
+  {
+    "name": "git-dmitriy",
+    "text": "SPAM SONG",
+    "cart": 3
   }
 ]
