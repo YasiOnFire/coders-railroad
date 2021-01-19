@@ -94,6 +94,13 @@ html {
   @include fluid-line-height(24px, 32px, $vp-small, $vp-large);
 }
 
+.btn-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
 body {
   background-color: rgb(26, 27, 27);
   color: var(--text-color);
