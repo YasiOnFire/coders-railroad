@@ -7,12 +7,11 @@ export const logo =
  \\_____\\___/ \\__,_|\\___|_|  |___/_|  \\_\\__,_|_|_|_|  \\___/ \\__,_|\\__,_|`
 
 
-export const locomotive =
-`
+export const locomotive = (year) => `
       .o      
      . ______ 
    _][_||__|| 
-  (  HF 2020| 
+  (  HF ${year}| 
  /-OO----OO""=
 ##############
 `
