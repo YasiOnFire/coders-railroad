@@ -21,7 +21,7 @@
 ```json
 {
   "name": "YasiOnFire", // your Github name
-  "text": "Yasio", // your message (max 18 chars)
+  "text": "Yasio", // your message (max 22 chars)
   "cart": 1 // one of four avaiable carts, see below
 }
 ```
@@ -54,7 +54,7 @@ _|       #2       |_
 * only data.json may be edited
 * must pass tests
 * only one cart per github user 
-* text may contain only letters and digits soult be maximum of 18 chars
+* text may contain only letters and digits soult be maximum of 22 chars
 * must comply with the code of conduct
 
 ---

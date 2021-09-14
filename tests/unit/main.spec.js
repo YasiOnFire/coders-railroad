@@ -15,14 +15,15 @@ describe("Data", () => {
           name: {
             type: "string",
             minLength: 1,
-            maxLength: 30,
+            maxLength: 40,
             pattern: "^[a-zA-Z0-9-]*$"
           },
           text: {
             type: "string",
             minLength: 1,
-            maxLength: 18,
-            pattern: "^[a-zA-Z0-9\u10A0-\u10FF @#!.?-]*$"
+            maxLength: 22,
+            pattern:
+              "^[a-zA-Z0-9\u10A0-\u10FF\u1f900-\u1f9ff @#!.?[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2694-\u2697]|\uD83E[\uDD10-\uDD5D])]*$"
           },
           cart: {
             type: "integer",

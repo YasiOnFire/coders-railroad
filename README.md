@@ -27,7 +27,7 @@ This is a simple project made for [Hactoberfest 2020](https://hacktoberfest.digi
 | property | description                            |
 |------|---------------------------------------------|
 | `name` | your Github name                            |
-| `text` | your message to show on cart (max 18 chars) |
+| `text` | your message to show on cart (max 22 chars) |
 | `cart` | # of cart to use (see below)                |
 
 ### Avaiable carts:
