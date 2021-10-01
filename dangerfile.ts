@@ -98,7 +98,7 @@ function evaluateChanges(changes: JSONPatch) {
     (cart: Cart) => !beforeCarts.has(JSON.stringify(cart))
   );
 
-  if (newCart.text.length > 18) {
+  if (newCart.text.length > 22) {
     fail(stripIndents`Your message is too long`);
     return false;
   }

@@ -4,9 +4,9 @@
     <p>
       This is a simple project made for
       <a href="https://hacktoberfest.digitalocean.com/" target="_blank"
-        >Hactoberfest 2020</a
-      >. An easy entry to Pull Requests.<br />You can add your cart to the
-      HF2020 train by submitting a PR.<br /><br />
+        >Hactoberfest</a
+      >. An easy entry to Pull Requests.<br />You can add your cart to the HF
+      train by submitting a PR.<br /><br />
       ## How to contribute?<br />
       1. Fork repo<br />
       2. Clone your fork<br />
@@ -21,7 +21,7 @@
 ```json
 {
   "name": "YasiOnFire", // your Github name
-  "text": "Yasio", // your message (max 18 chars)
+  "text": "Yasio", // your message (max 22 chars)
   "cart": 1 // one of four avaiable carts, see below
 }
 ```
@@ -47,6 +47,20 @@ _|       #2       |_
 |                   |
 |_       #3        _|
 "OO---------------OO"=
+
+.                     .
+|         #4          |
+"OO-----------------OO"=
+
+_-_-_-_-_-_-_-_-_-_-_-_
+|                     |
+|         #5          |
+"OO-----------------OO"=
+
+_______________________
+\                     /
+ |        #6         |
+"OO-----------------OO"=
 ```
 
 ### Rules
@@ -54,7 +68,7 @@ _|       #2       |_
 * only data.json may be edited
 * must pass tests
 * only one cart per github user 
-* text may contain only letters and digits soult be maximum of 18 chars
+* text may contain only letters and digits should be maximum of 22 chars
 * must comply with the code of conduct
 
 ---

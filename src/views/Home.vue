@@ -1,13 +1,23 @@
 <template>
   <div class="home">
     <p>
-      ------------------------------------------------------------<br />
+      ----------------------------------------------------------------------------<br />
       | Attach your cart by submitting a pull request on
       <a href="https://github.com/YasiOnFire/coders-railroad" target="_blank"
         >GitHub</a
-      >. |<br />
-      ------------------------------------------------------------<br />
+      >.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
+      ----------------------------------------------------------------------------<br />
       | <router-link to="/about" class="brn">Learn More</router-link> |
+      <a
+        href="#"
+        class="brn"
+        @click.prevent="toggleYear"
+        :title="
+          `Switch to Hacktoberfest ${year === 2021 ? '2020' : '2021'} Train`
+        "
+        >HF {{ year === 2021 ? "2020" : "2021" }} Train</a
+      >
+      |
       <input
         v-model="search"
         type="search"
@@ -16,10 +26,10 @@
       />
       | # of carts: {{ formatCount(userCarts.length) }} |
       <br />
-      ------------------------------------------------------------<br />
+      ----------------------------------------------------------------------------<br />
     </p>
     <p id="train" class="train-wrp">
-      <span v-html="formatFixer(locomotive)"></span>
+      <span v-html="formatFixer(locomotive(year))"></span>
       <span
         v-for="(el, idx) in filteredData"
         :key="idx"
@@ -35,6 +45,7 @@
 
 <script>
 import data from "@/assets/data.json";
+import data2020 from "@/assets/data2020.json";
 import { formatFixer, encodeHTML } from "@/assets/utils.js";
 import { locomotive, end, carts } from "@/assets/constants.js";
 import { ref, computed } from "vue";
@@ -42,6 +53,8 @@ import { ref, computed } from "vue";
 export default {
   name: "Home",
   setup() {
+    const year = ref(2021);
+
     const messageInject = (val, data) => {
       return (val += `<span><a href="https://github.com/${
         data.name
@@ -66,6 +79,11 @@ export default {
         : userCarts.value;
     });
 
+    const toggleYear = () => {
+      year.value = year.value === 2021 ? 2020 : 2021;
+      userCarts.value = year.value === 2021 ? data : data2020;
+    };
+
     return {
       filteredData,
       formatCount,
@@ -75,7 +93,9 @@ export default {
       carts,
       end,
       formatFixer,
-      locomotive
+      locomotive,
+      toggleYear,
+      year
     };
   }
 };
