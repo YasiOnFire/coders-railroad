@@ -8,5 +8,10 @@
         "name": "STM3900",
         "text": "Lessgooooo",
         "cart": 1
+    },
+    {
+        "name": "Rdxmaxx",
+        "text": "Hello World",
+        "cart": 2
     }
 ]
