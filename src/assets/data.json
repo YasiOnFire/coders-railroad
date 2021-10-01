@@ -1,7 +1,12 @@
 [
-  {
-    "name": "YasiOnFire",
-    "text": "Yasio says Hi!",
-    "cart": 0
-  }
+    {
+        "name": "YasiOnFire",
+        "text": "Yasio says Hi!",
+        "cart": 0
+    },
+    {
+        "name": "STM3900",
+        "text": "Lessgooooo",
+        "cart": 1
+    }
 ]
