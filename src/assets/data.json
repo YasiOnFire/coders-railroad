@@ -53,5 +53,10 @@
         "name": "princefishthrower",
         "text": "Hacktoberfest! 🎃",
         "cart": 0
-    }
+    },
+    {
+        "name": "opensourceally",
+        "text": "Open Source Rulz!!!",
+        "cart": 6
+      }
 ]
