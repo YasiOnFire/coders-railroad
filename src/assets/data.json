@@ -45,9 +45,13 @@
         "cart": 6
     },
     {  
-	"name": "zivkaziv",
-	"text": "JS rock",
-	"cart": 3
+        "name": "zivkaziv",
+        "text": "JS rock",
+        "cart": 3
+    },
+    {  
+        "name": "princefishthrower",
+        "text": "Hacktoberfest!",
+        "cart": 0
     }
-
 ]
