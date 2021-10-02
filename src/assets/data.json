@@ -43,5 +43,11 @@
         "name": "camperjett",
         "text": "Xploring",
         "cart": 6
+    },
+    {  
+	"name": "zivkaziv",
+	"text": "JS rock",
+	"cart": 3
     }
+
 ]
