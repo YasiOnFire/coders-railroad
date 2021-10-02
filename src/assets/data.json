@@ -43,5 +43,25 @@
         "name": "Alankruthisaieni",
         "text": "Coder",
         "cart": 3
+    },
+    {
+        "name": "camperjett",
+        "text": "Xploring",
+        "cart": 6
+    },
+    {
+        "name": "zivkaziv",
+        "text": "JS rock",
+        "cart": 3
+    },
+    {
+        "name": "princefishthrower",
+        "text": "Hacktoberfest! 🎃",
+        "cart": 0
+    },
+    {
+        "name": "opensourceally",
+        "text": "Open Source Rulz!!!",
+        "cart": 6
     }
 ]
