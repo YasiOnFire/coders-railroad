@@ -74,5 +74,10 @@
         "name": "anas4u02",
         "text": "Hacktoberfest 2k21 🎃",
         "cart": 6
+    },
+    {
+        "name": "JenningsF",
+        "text": "First Hacktoberfest!",
+        "cart": 3
     }
 ]
