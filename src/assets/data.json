@@ -25,8 +25,54 @@
         "cart": 2
     },
     {
+
         "name": "ChetanAtrawalkarCA",
         "text": "It's CA",
         "cart": 3
+    {
+        "name": "eltociear",
+        "text": "Sweet!",
+        "cart": 3
+    },
+    {
+        "name": "Tiwarisonal19",
+        "text": "Sweetest!",
+        "cart": 1
+    },
+    {
+        "name": "imsushant12",
+        "text": "Heyooo!",
+        "cart": 5
+    },
+    {
+        "name": "camperjett",
+        "text": "Xploring",
+        "cart": 6
+    },
+    {
+        "name": "zivkaziv",
+        "text": "JS rock",
+        "cart": 3
+    },
+    {
+        "name": "princefishthrower",
+        "text": "Hacktoberfest! 🎃",
+        "cart": 0
+    },
+    {
+        "name": "opensourceally",
+        "text": "Open Source Rulz!!!",
+        "cart": 6
+    },
+    {
+        "name": "Alankruthisaieni",
+        "text": "Excited!!",
+        "cart": 3
+    },
+    {
+        "name": "ivanovishado",
+        "text": "Go > other languages",
+        "cart": 1
+
     }
 ]
