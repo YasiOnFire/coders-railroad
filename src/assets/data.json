@@ -83,5 +83,10 @@
         "name": "Denice-S",
         "text": "Love Hacktoberfest!❤️",
         "cart": 5
-    }
+    },
+        {
+        "name": "Walter",
+        "text": "My First Hacktoberfest!",
+        "cart": 3
+    },
 ]
