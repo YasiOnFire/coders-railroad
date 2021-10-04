@@ -108,5 +108,10 @@
         "name": "fahlisaputra",
         "text": "Hacktoberfest is here!",
         "cart": 3
+    },
+    {
+        "name": "A-amon",
+        "text": "First Hacktoberfest!",
+        "cart": 5
     }
 ]
