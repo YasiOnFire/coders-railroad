@@ -113,5 +113,10 @@
         "name": "A-amon",
         "text": "First Hacktoberfest!",
         "cart": 5
+    },
+    {
+        "name": "milos5593",
+        "text": "THEY SEE ME ROLLIN!",
+        "cart": 6
     }
 ]
