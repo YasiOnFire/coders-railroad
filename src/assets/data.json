@@ -103,5 +103,10 @@
         "name": "tony-yh91",
         "text": "I love Hacktoberfest!",
         "cart": 6
+    },
+    {
+        "name": "fahlisaputra",
+        "text": "Hacktoberfest is here!",
+        "cart": 3
     }
 ]
