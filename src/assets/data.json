@@ -98,5 +98,10 @@
         "name": "RolloCasanova",
         "text": "Holi",
         "cart": 5
+    },
+    {
+        "name": "tony-yh91",
+        "text": "I love Hacktoberfest!",
+        "cart": 6
     }
 ]
