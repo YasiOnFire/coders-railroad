@@ -143,5 +143,10 @@
     "name": "rishikesh2003",
     "text": "I love Open Source!",
     "cart": 1
+  },
+  {
+    "name": "TchiRubick",
+    "text": "PHP is not dead !",
+    "cart": 3
   }
 ]
