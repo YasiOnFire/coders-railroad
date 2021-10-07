@@ -163,5 +163,10 @@
     "name": "Mogakamo",
     "text": "It's fun contributing",
     "cart": 3
-  }
+  },
+  {
+  "name": "Kavinya",
+  "text": "This is my first hactoberfest❤",
+  "cart": 5
+}
 ]
