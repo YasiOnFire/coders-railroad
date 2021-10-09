@@ -198,13 +198,13 @@
     "cart": 1
   },
   {
-    "name": "wsehl",
-    "text": "Reinventing Wheels",
-    "cart": 0
-  },
-  {
     "name": "TimYuen30",
     "text": "1st HacktoberFest! 🤖",
     "cart": 3
+  },
+  {
+    "name": "wsehl",
+    "text": "Reinventing Wheels",
+    "cart": 0
   }
 ]
