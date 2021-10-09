@@ -191,5 +191,10 @@
   { "name": "darostegui",
     "text": "Testing Codespaces❤!",
     "cart": 6
+  },
+  {
+    "name": "thaseyor",
+    "text": "OpenJS 🚀",
+    "cart": 1
   }
 ]
