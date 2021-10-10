@@ -201,11 +201,15 @@
     "name": "wsehl",
     "text": "Reinventing Wheels",
     "cart": 0
-  }
-,
+  },
   {
     "name": "timyu30",
     "text": "Hacktoberfest 2k21 🎃",
     "cart": 3
+  },
+  {
+    "name": "JoyceW414",
+    "text": "Happy Hacking!",
+    "cart": 0
   }
 ]
