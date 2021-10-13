@@ -235,5 +235,11 @@
         "name": "2wce",
         "text": "Makadii henyu🚀",
         "cart": 1
+    },
+    
+    {
+        "name": "JSNinja",
+        "text": "Hello world!",
+        "cart": 5
     }
 ]
