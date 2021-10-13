@@ -241,5 +241,11 @@
         "name": "benardcharumbira",
         "text": "Hello world!",
         "cart": 5
+    },
+
+    {
+        "name": "ZeeMangena",
+        "text": "Hackoberfest SZN",
+        "cart": 0
     }
 ]
