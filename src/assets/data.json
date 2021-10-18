@@ -1,4 +1,5 @@
-[{
+[
+    {
         "name": "YasiOnFire",
         "text": "Yasio says Hi!",
         "cart": 0
@@ -218,37 +219,31 @@
         "text": "0736b was here!",
         "cart": 6
     },
-
     {
         "name": "CristiCode",
         "text": "Happy Hacktoberfest!🎃",
         "cart": 0
     },
-
     {
         "name": "devanshmehra",
         "text": "arigato!! 🥳",
         "cart": 1
     },
-
     {
         "name": "2wce",
         "text": "Makadii henyu🚀",
         "cart": 1
     },
-
     {
         "name": "benardcharumbira",
         "text": "Hello world!",
         "cart": 5
     },
-
     {
         "name": "ZeeMangena",
         "text": "Hackoberfest SZN",
         "cart": 0
     },
-
     {
         "name": "SanvirDessai",
         "text": "🚂 Mugen 🚃 Train 🚃",
@@ -256,12 +251,17 @@
     },
     {
         "name": "TimothyDJones",
-	"text": "What a cool project!",
-	"cart": 6
+        "text": "What a cool project!",
+        "cart": 6
     },
     {
         "name": "Gmatieso",
         "text": "Hackertoberfest21",
         "cart": 6
+    },
+    {
+        "name": "Shreyans",
+        "text": "FunctionalPurelyLazy",
+        "cart": 5
     }
 ]
