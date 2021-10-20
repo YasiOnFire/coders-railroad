@@ -274,5 +274,10 @@
     "name": "Franqsanz",
     "text": "I like open source!",
     "cart": 5
+  },
+  {
+    "name": "thanasis00",
+    "text": "Thank you hacktoberfest!",
+    "cart": 3
   }
 ]
