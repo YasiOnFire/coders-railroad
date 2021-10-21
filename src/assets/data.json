@@ -279,5 +279,10 @@
     "name": "milouk",
     "text": "LOL!",
     "cart": 6
+  },
+  {
+    "name": "diamant3",
+    "text": "My 1st hacktoberfest!",
+    "cart": 4
   }
 ]
