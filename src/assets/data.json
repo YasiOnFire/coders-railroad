@@ -284,5 +284,10 @@
     "name": "diamant3",
     "text": "My 1st hacktoberfest!",
     "cart": 4
+  },
+  {
+    "name": "Sina-Sche",
+    "text": "Hacktoberfest 2🎃21!",
+    "cart": 1
   }
 ]
