@@ -22,7 +22,7 @@
 {
   "name": "YasiOnFire", // your Github name
   "text": "Yasio", // your message (max 22 chars)
-  "cart": 1 // one of four avaiable carts, see below
+  "cart": 1 // one of seven avaiable carts, see below
 }
 ```
 
