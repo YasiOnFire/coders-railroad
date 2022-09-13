@@ -11,11 +11,25 @@
       <a
         href="#"
         class="brn"
-        @click.prevent="toggleYear"
-        :title="
-          `Switch to Hacktoberfest ${year === 2021 ? '2020' : '2021'} Train`
-        "
-        >HF {{ year === 2021 ? "2020" : "2021" }} Train</a
+        @click.prevent="toggleYear(2022)"
+        title="Switch to Hacktoberfest 2022 Train"
+        >2022</a
+      >
+      |
+      <a
+        href="#"
+        class="brn"
+        @click.prevent="toggleYear(2021)"
+        title="Switch to Hacktoberfest 2021 Train"
+        >2021</a
+      >
+      |
+      <a
+        href="#"
+        class="brn"
+        @click.prevent="toggleYear(2020)"
+        title="Switch to Hacktoberfest 2020 Train"
+        >2020</a
       >
       |
       <input
@@ -24,7 +38,7 @@
         class="search"
         placeholder="Search by name or text"
       />
-      | # of carts: {{ formatCount(userCarts.length) }} |
+      | Carts: {{ formatCount(userCarts.length) }} |
       <br />
       ----------------------------------------------------------------------------<br />
     </p>
@@ -44,16 +58,17 @@
 </template>
 
 <script>
+import { carts, end, locomotive } from "@/assets/constants.js";
 import data from "@/assets/data.json";
 import data2020 from "@/assets/data2020.json";
-import { formatFixer, encodeHTML } from "@/assets/utils.js";
-import { locomotive, end, carts } from "@/assets/constants.js";
-import { ref, computed } from "vue";
+import data2021 from "@/assets/data2021.json";
+import { encodeHTML, formatFixer } from "@/assets/utils.js";
+import { computed, ref } from "vue";
 
 export default {
   name: "Home",
   setup() {
-    const year = ref(2021);
+    const year = ref(2022);
 
     const messageInject = (val, data) => {
       return (val += `<span><a href="https://github.com/${
@@ -79,9 +94,10 @@ export default {
         : userCarts.value;
     });
 
-    const toggleYear = () => {
-      year.value = year.value === 2021 ? 2020 : 2021;
-      userCarts.value = year.value === 2021 ? data : data2020;
+    const toggleYear = y => {
+      year.value = y;
+      userCarts.value =
+        year.value === 2021 ? data2021 : year.value === 2020 ? data2020 : data;
     };
 
     return {
