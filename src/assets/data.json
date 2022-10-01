@@ -28,5 +28,10 @@
   "name": "intSpartan",
   "text": "Hello World",
   "cart": 1
+  },
+  {
+  "name": "ayeolakenny",
+  "text": "Hacktoberfest leggo!!!",
+  "cart": 4
   }
 ]
