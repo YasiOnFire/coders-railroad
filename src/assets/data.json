@@ -38,5 +38,10 @@
   "name": "InstallEmployee",
   "text": "First Hacktoberfest!",
   "cart": 6
+  },
+  {
+    "name": "Nathan-Abegaz",
+    "text": "Hacktoberfest 2022!!",
+    "cart": 3
   }
 ]
