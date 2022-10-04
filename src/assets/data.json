@@ -55,8 +55,14 @@
     "cart": 6
   },
   {
+
     "name": "milansurelia",
     "text": "Milan Surelia\n Flutter Developer @7Span",
     "cart": 1
+  },
+  {
+    "name": "hitchhicker007",
+    "text": "Hacktoberfest2022 :)",
+    "cart": 4
   }
 ]
