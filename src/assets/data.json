@@ -25,11 +25,6 @@
   "cart": 1
   },
   {
-  "name": "pratikbutani",
-  "text": "Bombay to Goa S4.",
-  "cart": 2
-  },
-  {
   "name": "intSpartan",
   "text": "Hello World",
   "cart": 1
@@ -63,5 +58,10 @@
     "name": "hitchhicker007",
     "text": "Hacktoberfest2022 :)",
     "cart": 4
-  }
+  },
+  {
+  "name": "pratikbutani",
+  "text": "Bombay to Goa S4.",
+  "cart": 2
+  },
 ]
