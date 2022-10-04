@@ -53,11 +53,6 @@
     "name": "Bobliuuu",
     "text": "Hacktoberfest :0",
     "cart": 6
-  }
-  {
-    "name": "mukundjogi",
-    "text": "Hacktoberfest :2022",
-    "cart": 4
   },
   {
     "name": "hitchhicker007",
@@ -68,5 +63,10 @@
   "name": "pratikbutani",
   "text": "Bombay to Goa S4.",
   "cart": 2
+  },
+  {
+    "name": "mukundjogi",
+    "text": "Hacktoberfest :2022",
+    "cart": 4
   }
 ]
