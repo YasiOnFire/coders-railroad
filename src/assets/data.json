@@ -12,7 +12,7 @@
   {
     "name": "STM3900",
     "text": "Lezgongueeeeee",
-    "cart": 5
+    "cart": 0
   },
   {
     "name": "harshil1973",
@@ -73,5 +73,10 @@
     "name": "Jaynirmal31109",
     "text": "Jay Nirmal Say Hi!!",
     "cart": 3
+  },
+  {
+    "name": "Shweta031",
+    "text": "Hectoberfest 2022",
+    "cart": 5
   }
 ]
