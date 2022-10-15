@@ -78,5 +78,10 @@
     "name": "shwetavish",
     "text": "Hello everyone",
     "cart": 5
+  },
+  {
+    "name": "ruchit-7span",
+    "text": "first Hacktoberfest :)",
+    "cart": 3
   }
 ]
