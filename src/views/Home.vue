@@ -7,7 +7,15 @@
         >GitHub</a
       >.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />
       ----------------------------------------------------------------------------<br />
-      | <router-link to="/about" class="brn">Learn More</router-link> |
+      | <router-link to="/about" class="brn">About</router-link> |
+      <a
+        href="#"
+        class="brn"
+        @click.prevent="toggleYear(2023)"
+        title="Switch to Hacktoberfest 2023 Train"
+        >2023</a
+      >
+      |
       <a
         href="#"
         class="brn"
@@ -38,7 +46,7 @@
         class="search"
         placeholder="Search by name or text"
       />
-      | Carts: {{ formatCount(userCarts.length) }} |
+      | COUNT: {{ formatCount(userCarts.length) }} |
       <br />
       ----------------------------------------------------------------------------<br />
     </p>
@@ -62,6 +70,7 @@ import { carts, end, locomotive } from "@/assets/constants.js";
 import data from "@/assets/data.json";
 import data2020 from "@/assets/data2020.json";
 import data2021 from "@/assets/data2021.json";
+import data2022 from "@/assets/data2022.json";
 import { encodeHTML, formatFixer } from "@/assets/utils.js";
 import { computed, ref } from "vue";
 
@@ -97,7 +106,13 @@ export default {
     const toggleYear = y => {
       year.value = y;
       userCarts.value =
-        year.value === 2021 ? data2021 : year.value === 2020 ? data2020 : data;
+        year.value === 2021
+          ? data2021
+          : year.value === 2020
+          ? data2020
+          : year.value === 2022
+          ? data2022
+          : data;
     };
 
     return {
