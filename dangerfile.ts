@@ -1,10 +1,18 @@
-import { message, fail, markdown, danger, GitDSL, JSONPatch, JSONPatchOperation } from "danger";
 import { stripIndent, stripIndents } from "common-tags";
+import {
+  GitDSL,
+  JSONPatch,
+  JSONPatchOperation,
+  danger,
+  fail,
+  markdown,
+  message
+} from "danger";
 
 interface Cart {
-  name: string,
-  text: string,
-  cart: number
+  name: string;
+  text: string;
+  cart: number;
 }
 
 function handleMultipleFileChanges(gitChanges: GitDSL) {
@@ -38,7 +46,7 @@ function hasOperation(diffs: JSONPatchOperation[], operation: string) {
   return false;
 }
 
-function array2Set(data: Cart[]) : Set<any> {
+function array2Set(data: Cart[]): Set<any> {
   const outputSet = new Set();
   data.forEach((cart: Cart) => outputSet.add(JSON.stringify(cart)));
 
@@ -48,7 +56,7 @@ function array2Set(data: Cart[]) : Set<any> {
 function evaluateChanges(changes: JSONPatch) {
   const isDiffEmpty = changes.diff.length === 0;
   if (isDiffEmpty) {
-    fail('This PR appears to be empty.');
+    fail("This PR appears to be empty.");
     return false;
   }
 
@@ -65,19 +73,17 @@ function evaluateChanges(changes: JSONPatch) {
   );
 
   if (removedCarts.length > 0) {
-    const removedUserNames = removedCarts.map(
-      (el: string) => {
-        console.log('el: ', el);
-        return JSON.parse(el).name
-      }
-    );
+    const removedUserNames = removedCarts.map((el: string) => {
+      console.log("el: ", el);
+      return JSON.parse(el).name;
+    });
 
     fail(
-      'It seems like you are accidentally deleting or editing some contributions of others. Please make sure you have pulled the latest changes from the master branch and resolved any merge conflicts. https://help.github.com/en/articles/syncing-a-fork'
+      "It seems like you are accidentally deleting or editing some contributions of others. Please make sure you have pulled the latest changes from the master branch and resolved any merge conflicts. https://help.github.com/en/articles/syncing-a-fork"
     );
     fail(
       stripIndents`Make sure that the following usernames are indeed included and unchanged: ${removedUserNames.join(
-        ','
+        ","
       )}`
     );
     return false;
@@ -90,7 +96,9 @@ function evaluateChanges(changes: JSONPatch) {
   );
 
   if (cartUsername.length > 1) {
-    fail(stripIndents`You cannot create more than one cart per GitHub username.`);
+    fail(
+      stripIndents`You cannot create more than one cart per GitHub username.`
+    );
     return false;
   }
 
@@ -103,27 +111,33 @@ function evaluateChanges(changes: JSONPatch) {
     return false;
   }
 
-  if (danger.github && newCart.name.toLowerCase() !== gitHubUsername?.toLowerCase()) {
+  if (
+    danger.github &&
+    newCart.name.toLowerCase() !== gitHubUsername?.toLowerCase()
+  ) {
     fail(stripIndents`You cannot create cart for other GitHub users.`);
     return false;
   }
 
-  const addOperations = changes.diff.filter(x => x.op === 'add');
+  const addOperations = changes.diff.filter(x => x.op === "add");
   if (addOperations.length > 1) {
     fail(
-      'It seems like you are adding more than one cart. This will require a manual review to make sure this is not a mistake.'
+      "It seems like you are adding more than one cart. This will require a manual review to make sure this is not a mistake."
     );
     return false;
   }
 
-  if (hasOperation(changes.diff, 'remove') || hasOperation(changes.diff, 'replace')) {
+  if (
+    hasOperation(changes.diff, "remove") ||
+    hasOperation(changes.diff, "replace")
+  ) {
     fail(
-      'It seems like you are accidentally deleting some contributions of others. Please make sure you have pulled the latest changes from the master branch and resolved any merge conflicts. https://help.github.com/en/articles/syncing-a-fork'
+      "It seems like you are accidentally deleting some contributions of others. Please make sure you have pulled the latest changes from the master branch and resolved any merge conflicts. https://help.github.com/en/articles/syncing-a-fork"
     );
     return false;
   }
 
-  return true
+  return true;
 }
 
 async function run() {
@@ -137,6 +151,10 @@ async function run() {
       const jsonPatch = await danger.git.JSONPatchForFile(
         "src/assets/data.json"
       );
+      if (!jsonPatch) {
+        fail("This PR appears to be empty.");
+        return;
+      }
       const passed = await evaluateChanges(jsonPatch);
       if (passed) {
         message(
@@ -145,7 +163,7 @@ async function run() {
       }
     }
   } catch (error) {
-    fail(JSON.stringify(error))
+    fail(JSON.stringify(error));
   }
   // }
 }
