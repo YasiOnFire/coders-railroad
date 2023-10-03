@@ -2,8 +2,6 @@
 /* eslint-disable no-undef */
 // @ts-nocheck
 
-import { stripIndents } from "common-tags";
-
 interface Cart {
   name: string;
   text: string;
@@ -77,9 +75,7 @@ function evaluateChanges(changes: JSONPatch) {
   );
 
   if (cartUsername.length > 1) {
-    fail(
-      stripIndents`You cannot create more than one cart per GitHub username.`
-    );
+    fail(`You cannot create more than one cart per GitHub username.`);
   }
 
   const newCart = changes.after.find(
@@ -87,14 +83,14 @@ function evaluateChanges(changes: JSONPatch) {
   );
 
   if (newCart.text.length > 22) {
-    fail(stripIndents`Your message is too long`);
+    fail(`Your message is too long`);
   }
 
   if (
     danger.github &&
     newCart.name.toLowerCase() !== gitHubUsername?.toLowerCase()
   ) {
-    fail(stripIndents`You cannot create cart for other GitHub users.`);
+    fail(`You cannot create cart for other GitHub users.`);
   }
 
   const addOperations = changes.diff.filter(x => x.op === "add");
@@ -146,4 +142,3 @@ async function run() {
 run().catch(console.error);
 
 export { handleMultipleFileChanges, hasOnlyCartChange };
-
