@@ -8,7 +8,7 @@ interface Cart {
   cart: number;
 }
 
-function handleMultipleFileChanges(gitChanges: GitDSL) {
+function handleMultipleFileChanges() {
   fail(
     "This PR requires a manual review because you are changing more files than just `src/assets/data.json`."
   );
@@ -68,7 +68,7 @@ function evaluateChanges(changes: JSONPatch) {
     );
   }
 
-  const gitHubUsername = danger.github?.pr?.user?.login;
+  const gitHubUsername = github?.pr?.user?.login;
 
   const cartUsername = changes.after.filter(
     (cart: Cart) => cart.name.toLowerCase() === gitHubUsername?.toLowerCase()
@@ -86,10 +86,7 @@ function evaluateChanges(changes: JSONPatch) {
     fail(`Your message is too long`);
   }
 
-  if (
-    danger.github &&
-    newCart.name.toLowerCase() !== gitHubUsername?.toLowerCase()
-  ) {
+  if (github && newCart.name.toLowerCase() !== gitHubUsername?.toLowerCase()) {
     fail(`You cannot create cart for other GitHub users.`);
   }
 
@@ -113,16 +110,13 @@ function evaluateChanges(changes: JSONPatch) {
 }
 
 async function run() {
-  // if (danger.github.thisPR) {
   try {
-    if ((await danger.git.linesOfCode()) === 0) {
+    if ((await git.linesOfCode()) === 0) {
       fail("This PR is empty. Read README.md.");
-    } else if (!hasOnlyCartChange(danger.git)) {
-      await handleMultipleFileChanges(danger.git);
+    } else if (!hasOnlyCartChange(git)) {
+      await handleMultipleFileChanges(git);
     } else {
-      const jsonPatch = await danger.git.JSONPatchForFile(
-        "src/assets/data.json"
-      );
+      const jsonPatch = await git.JSONPatchForFile("src/assets/data.json");
       if (!jsonPatch) {
         fail("This PR appears to be empty.");
       }
@@ -136,7 +130,6 @@ async function run() {
   } catch (error) {
     fail(JSON.stringify(error));
   }
-  // }
 }
 
 run().catch(console.error);
