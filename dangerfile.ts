@@ -3,15 +3,6 @@
 // @ts-nocheck
 
 import { stripIndents } from "common-tags";
-// import {
-//   GitDSL,
-//   JSONPatch,
-//   JSONPatchOperation,
-//   danger,
-//   fail,
-//   markdown,
-//   message
-// } from "danger";
 
 interface Cart {
   name: string;
