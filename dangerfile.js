@@ -1,12 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
-// @ts-nocheck
-
-interface Cart {
-  name: string;
-  text: string;
-  cart: number;
-}
 
 function handleMultipleFileChanges() {
   fail(
@@ -14,7 +7,7 @@ function handleMultipleFileChanges() {
   );
 }
 
-function hasOnlyCartChange(gitChanges: GitDSL) {
+function hasOnlyCartChange(gitChanges) {
   return (
     gitChanges.modified_files.length === 1 &&
     gitChanges.modified_files[0] === "src/assets/data.json" &&
@@ -23,7 +16,7 @@ function hasOnlyCartChange(gitChanges: GitDSL) {
   );
 }
 
-function hasOperation(diffs: JSONPatchOperation[], operation: string) {
+function hasOperation(diffs, operation) {
   for (const diff of diffs) {
     if (diff.op === operation) {
       return true;
@@ -33,32 +26,32 @@ function hasOperation(diffs: JSONPatchOperation[], operation: string) {
   return false;
 }
 
-function array2Set(data: Cart[]): Set<any> {
+function array2Set(data) {
   const outputSet = new Set();
-  data.forEach((cart: Cart) => outputSet.add(JSON.stringify(cart)));
+  data.forEach(cart => outputSet.add(JSON.stringify(cart)));
 
   return outputSet;
 }
 
-function evaluateChanges(changes: JSONPatch) {
+function evaluateChanges(changes) {
   const isDiffEmpty = changes.diff.length === 0;
   if (isDiffEmpty) {
     fail("This PR appears to be empty.");
   }
 
-  const beforeCarts: Set<string> = array2Set(changes.before);
-  const afterCarts: Set<string> = array2Set(changes.after);
+  const beforeCarts = array2Set(changes.before);
+  const afterCarts = array2Set(changes.after);
 
   const addsMultipleCarts = afterCarts.size - beforeCarts.size > 1;
   if (addsMultipleCarts) {
     fail(`You can not add more than one cart.`);
   }
   const removedCarts = changes.before.filter(
-    (cart: Cart) => !afterCarts.has(JSON.stringify(cart))
+    cart => !afterCarts.has(JSON.stringify(cart))
   );
 
   if (removedCarts.length > 0) {
-    const removedUserNames = removedCarts.map((el: string) => {
+    const removedUserNames = removedCarts.map(el => {
       console.log("el: ", el);
       return JSON.parse(el).name;
     });
@@ -71,7 +64,7 @@ function evaluateChanges(changes: JSONPatch) {
   const gitHubUsername = github?.pr?.user?.login;
 
   const cartUsername = changes.after.filter(
-    (cart: Cart) => cart.name.toLowerCase() === gitHubUsername?.toLowerCase()
+    cart => cart.name.toLowerCase() === gitHubUsername?.toLowerCase()
   );
 
   if (cartUsername.length > 1) {
@@ -79,7 +72,7 @@ function evaluateChanges(changes: JSONPatch) {
   }
 
   const newCart = changes.after.find(
-    (cart: Cart) => !beforeCarts.has(JSON.stringify(cart))
+    cart => !beforeCarts.has(JSON.stringify(cart))
   );
 
   if (newCart.text.length > 22) {
