@@ -8,5 +8,10 @@
     "name": "DustyDogCodex",
     "text": "I like ChooChoo Train!",
     "cart": 5
+  },
+  {
+    "name": "elo",
+    "text": "test",
+    "cart": 5
   }
 ]
