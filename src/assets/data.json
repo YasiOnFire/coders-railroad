@@ -13,5 +13,10 @@
     "name": "elo",
     "text": "test",
     "cart": 5
+  },
+  {
+    "name": "kryzysiek",
+    "text": "Hello Maciuś !",
+    "cart": 4
   }
 ]
