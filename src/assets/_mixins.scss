@@ -1,62 +1,40 @@
-@use "sass:math";
+@use 'sass:math';
 
 $vp-small: 560px;
 $vp-large: 1920px;
 
-@mixin fluid-font-size(
-  $minFontSize: 16px,
-  $maxFontSize: 20px,
-  $minViewport: 600px,
-  $maxViewport: 1200px
-) {
-  $slope: math.div($minFontSize - $maxFontSize, $minViewport - $maxViewport);
-  $base: $maxFontSize - $slope * $maxViewport;
+@mixin fluid-font-size($minFontSize, $maxFontSize, $minViewport, $maxViewport) {
+  $slope: math.div($maxFontSize - $minFontSize, $maxViewport - $minViewport);
+  $intercept: $minFontSize - $slope * $minViewport;
 
-  font-size: $minFontSize;
-
-  @media (min-width: $minViewport) {
-    font-size: calc(#{$base} + 100vw * #{$slope});
-  }
-
-  @media (min-width: $maxViewport) {
-    font-size: $maxFontSize;
-  }
+  font-size: clamp(
+    #{$minFontSize},
+    calc(#{$intercept} + #{$slope} * 100vw),
+    #{$maxFontSize}
+  );
 }
-@mixin fluid-bottom(
-  $minBottom: 16px,
-  $maxBottom: 20px,
-  $minViewport: 600px,
-  $maxViewport: 1200px
-) {
-  $slope: math.div(($minBottom - $maxBottom), ($minViewport - $maxViewport));
-  $base: $maxBottom - $slope * $maxViewport;
 
-  bottom: $minBottom;
+// Mixin for fluid line-height using CSS clamp and math.div
+@mixin fluid-line-height($minLineHeight, $maxLineHeight, $minViewport, $maxViewport) {
+  $slope: math.div($maxLineHeight - $minLineHeight, $maxViewport - $minViewport);
+  $intercept: $minLineHeight - $slope * $minViewport;
 
-  @media (min-width: $minViewport) {
-    bottom: calc(#{$base} + 100vw * #{$slope});
-  }
-
-  @media (min-width: $maxViewport) {
-    bottom: $maxBottom;
-  }
+  line-height: clamp(
+    #{$minLineHeight},
+    calc(#{$intercept} + #{$slope} * 100vw),
+    #{$maxLineHeight}
+  );
 }
-@mixin fluid-line-height(
-  $minLineHeight: 16px,
-  $maxLineHeight: 20px,
-  $minViewport: 600px,
-  $maxViewport: 1200px
-) {
-  $slope: math.div(($minLineHeight - $maxLineHeight), ($minViewport - $maxViewport));
-  $base: $maxLineHeight - $slope * $maxViewport;
 
-  line-height: $minLineHeight;
+// Mixin for fluid bottom using CSS clamp and math.div
+@mixin fluid-bottom($minBottom, $maxBottom, $minViewport, $maxViewport) {
+  $slope: math.div($maxBottom - $minBottom, $maxViewport - $minViewport);
+  $intercept: $minBottom - $slope * $minViewport;
 
-  @media (min-width: $minViewport) {
-    line-height: calc(#{$base} + 100vw * #{$slope});
-  }
-
-  @media (min-width: $maxViewport) {
-    line-height: $maxLineHeight;
-  }
+  bottom: clamp(
+    #{$minBottom},
+    calc(#{$intercept} + #{$slope} * 100vw),
+    #{$maxBottom}
+  );
 }
+

@@ -11,9 +11,17 @@
       <a
         href="#"
         class="brn"
+        @click.prevent="toggleYear(2024)"
+        title="Switch to Hacktoberfest 2024 Train"
+        >2024</a
+      >
+      |
+      <a
+        href="#"
+        class="brn"
         @click.prevent="toggleYear(2023)"
         title="Switch to Hacktoberfest 2023 Train"
-        >2023</a
+        >23</a
       >
       |
       <a
@@ -21,7 +29,7 @@
         class="brn"
         @click.prevent="toggleYear(2022)"
         title="Switch to Hacktoberfest 2022 Train"
-        >2022</a
+        >22</a
       >
       |
       <a
@@ -29,7 +37,7 @@
         class="brn"
         @click.prevent="toggleYear(2021)"
         title="Switch to Hacktoberfest 2021 Train"
-        >2021</a
+        >21</a
       >
       |
       <a
@@ -37,7 +45,7 @@
         class="brn"
         @click.prevent="toggleYear(2020)"
         title="Switch to Hacktoberfest 2020 Train"
-        >2020</a
+        >20</a
       >
       |
       <input
@@ -71,6 +79,7 @@ import data from "@/assets/data.json";
 import data2020 from "@/assets/data2020.json";
 import data2021 from "@/assets/data2021.json";
 import data2022 from "@/assets/data2022.json";
+import data2023 from "@/assets/data2023.json";
 import { encodeHTML, formatFixer } from "@/assets/utils.js";
 import { computed, ref } from "vue";
 
@@ -112,6 +121,8 @@ export default {
           ? data2020
           : year.value === 2022
           ? data2022
+          : year.value === 2023
+          ? data2023
           : data;
     };
 
